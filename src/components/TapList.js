@@ -13,6 +13,7 @@ function TapList (props) {
           pints={tap.pints}
           id={tap.id}
           key={tap.key}
+          onSelectingTap={props.onSelectingTap}
         />
       )}
     </>
@@ -21,6 +22,7 @@ function TapList (props) {
 
 TapList.propTypes = {
   tapList: PropTypes.array,
+  onSelectingTap: PropTypes.func,
 }
 
 

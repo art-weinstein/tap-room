@@ -3,10 +3,12 @@ import PropTypes from 'prop-types';
 
 function Tap (props) {
   return (
-    <>
-      <h4>{props.name} - {props.brand} - ${props.price}</h4>
-      <p>{props.content}% - {props.pints} pints available</p>
-      <hr/>
+    <> 
+      <div onClick = {() =>props.onSelectingTap(props.id)}>
+        <h4>{props.name} - {props.brand} - ${props.price}</h4>
+        <p>{props.content}% - {props.pints} pints available</p>
+        <hr/>
+      </div>
     </>
   );
 }
@@ -16,11 +18,9 @@ Tap.propTypes = {
   name: PropTypes.string.isRequired,
   brand: PropTypes.string.isRequired,
   price: PropTypes.number.isRequired,
-  content: PropTypes.number.isRequired
+  content: PropTypes.number.isRequired,
+  onSelectingTap: PropTypes.func,
 }
 
-Tap.defaultProps = {
-  pints: 124
-}
 
 export default Tap;
