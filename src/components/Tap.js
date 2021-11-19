@@ -4,8 +4,8 @@ import PropTypes from 'prop-types';
 function Tap (props) {
   return (
     <>
-      <h4>{props.name} - {props.brand} - {props.price}</h4>
-      <p>{props.content}% - {props.pints}</p>
+      <h4>{props.name} - {props.brand} - ${props.price}</h4>
+      <p>{props.content}% - {props.pints} pints available</p>
       <hr/>
     </>
   );

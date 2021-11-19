@@ -13,8 +13,8 @@ function TapDetails(props) {
   );
 }
 
-NewTap.propTypes = {
-  tap: PropTyeps.object,
+TapDetails.propTypes = {
+  tap: PropTypes.object,
 }
 
 export default TapDetails;

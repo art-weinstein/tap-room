@@ -1,6 +1,7 @@
 import React from 'react';
 import NewTap from './NewTap';
 import TapList from './TapList';
+import TapDetails from './TapDetails'
 
 
 class TapControl extends React.Component{
@@ -17,7 +18,7 @@ class TapControl extends React.Component{
   handleNewResetClick = () => {
     if (this.state.step < 2) {
       this.setState((prevState) => ({
-        setp: prevState.step + 1,
+        step: prevState.step + 1,
         selectedTap: null,
       }));
     } else {
@@ -56,10 +57,31 @@ render() {
   if(this.state.selectedTap != null){
     currentDisplay = (
       <>
-        
+        <TapDetails 
+          tap = {this.state.selectedTap}
+        />
+        <button onClick={this.handleNewResetClick}>Back</button>
       </>
     );
+  } else if (this.state.step === 1){
+    currentDisplay = (
+      <>
+        <TapList
+          tapList={this.state.mainTapList}
+          onSelectingTap={this.handleSelectingTap}
+        />
+        <button onClick={this.handleNewResetClick}>Add Tap</button>
+      </>
+    );
+  } else if (this.state.step === 2){
+    currentDisplay = (
+      <>
+        <NewTap onNewTapCreation = {this.handleAddingNewTapToList}/>
+        <button onClick={this.handleNewResetClick}>Back</button>
+      </>
+    )
   }
+  return currentDisplay;
 }
 
 }

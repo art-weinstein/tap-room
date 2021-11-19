@@ -17,11 +17,11 @@ export default function NewTap(props) {
   }
   return(
     <form onSubmit={handleSubmit}>
-      <input type="text" name="name"/>
-      <input type="text" name="brand"/>
-      <input type="number" name="price"/>
-      <input type="number" name="content"/>
-      <input type="number" name="pints"/>
+      <input type="text" name="name" placeholder="Name"/>
+      <input type="text" name="brand" placeholder="Brand"/>
+      <input type="number" name="price" placeholder="Price"/>
+      <input type="number" name="content" placeholder="Alcohol Content"/>
+      <button>Add</button>
     </form>
   )
 }
