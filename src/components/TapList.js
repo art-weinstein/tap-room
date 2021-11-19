@@ -12,7 +12,7 @@ function TapList (props) {
           content={tap.content}
           pints={tap.pints}
           id={tap.id}
-          key={tap.key}
+          key={tap.id}
           onSelectingTap={props.onSelectingTap}
         />
       )}

@@ -36,16 +36,10 @@ class TapControl extends React.Component{
     this.setState({ step: 1, selectedTap: selectedTap});
   };
 
-  handleSellTap = (id) => {
-    let newMainTapList = [...this.state.mainTapList];
-    const selectedTap = this.state.mainTapList.filter((t) => t.id === id);
-    const tapListIndex = newMainTapList.findIndex(
-      (t) => t.id === selectedTap[0].id
-    );
-    if (newMainTapList.filter((t)=>t.id===selectedTap[0].id).length >0){
-      newMainTapList[tapListIndex].quantity -= 1;
-    }
-    this.setState({mainTapList: newMainTapList})
+  handleSellTap = () => {
+    let sellPint = this.state.mainTapList.filter((t) => t.id === this.state.selectedTap.id)[0];
+    sellPint = sellPint.pints --;
+    this.setState({sellPint: sellPint})
   }
   //editClick here
 
@@ -82,7 +76,7 @@ render() {
           tapList={this.state.mainTapList}
           onSelectingTap={this.handleSelectingTap}
         />
-        <button onClick={this.handleNewResetClick}>Add Tap</button>
+        <button onClick={this.handleNewResetClick}>Add Keg</button>
       </>
     );
   } else if (this.state.step === 2){

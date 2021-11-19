@@ -6,7 +6,7 @@ function Tap (props) {
     <> 
       <div onClick = {() =>props.onSelectingTap(props.id)}>
         <h4>{props.name} - {props.brand} - ${props.price}</h4>
-        <p>{props.content}% - {props.pints} pints available</p>
+        <p>Alcohol content: {props.content}% - [click here for details/orders]</p>
         <hr/>
       </div>
     </>
