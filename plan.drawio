@@ -1,0 +1,40 @@
+<mxfile host="65bd71144e">
+    <diagram id="GmdeU1M09zs935_5wNmE" name="Page-1">
+        <mxGraphModel dx="152" dy="958" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1ba1e2;strokeColor=#006EAF;fontColor=#ffffff;" parent="1" vertex="1">
+                    <mxGeometry x="90" y="40" width="640" height="800" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="Header&lt;br&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="150" y="70" width="530" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="Tap control" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="150" y="150" width="530" height="650" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="Tap List&lt;br&gt;" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;strokeColor=#3700CC;fontColor=#ffffff;fillColor=#190033;" parent="1" vertex="1">
+                    <mxGeometry x="170" y="210" width="490" height="220" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="Beer" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#190033;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="190" y="250" width="450" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="Tap Details/Sell by pint" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#0050ef;verticalAlign=top;strokeColor=#001DBC;fontColor=#ffffff;" parent="1" vertex="1">
+                    <mxGeometry x="200" y="280" width="430" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" style="edgeStyle=none;html=1;" parent="1" source="9" target="6" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="9" target="12" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="Add a beer&lt;br&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#0050ef;verticalAlign=top;strokeColor=#001DBC;fontColor=#ffffff;" parent="1" vertex="1">
+                    <mxGeometry x="200" y="360" width="430" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="New beer form&lt;br&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#0050ef;verticalAlign=top;strokeColor=#001DBC;fontColor=#ffffff;" parent="1" vertex="1">
+                    <mxGeometry x="200" y="500" width="430" height="40" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
