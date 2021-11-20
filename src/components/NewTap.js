@@ -1,4 +1,4 @@
-import {v4} from 'uuid';
+import { v4 } from 'uuid';
 import React from 'react';
 import PropTypes from 'prop-types';
 
@@ -15,14 +15,17 @@ export default function NewTap(props) {
       pints: parseInt(124),
     })
   }
-  return(
-    <form onSubmit={handleSubmit}>
-      <input type="text" name="name" placeholder="Name"/>
-      <input type="text" name="brand" placeholder="Brand"/>
-      <input type="number" name="price" placeholder="Price"/>
-      <input type="number" name="content" placeholder="Alcohol Content"/>
-      <button>Add</button>
-    </form>
+  return (
+    <>
+      <h3>Add a Keg</h3>
+      <form onSubmit={handleSubmit}>
+        <input type="text" name="name" placeholder="Name" />
+        <input type="text" name="brand" placeholder="Brand" />
+        <input type="number" name="price" placeholder="Price" />
+        <input type="number" name="content" placeholder="Alcohol Content" />
+        <button>Add</button>
+      </form>
+    </>
   )
 }
 

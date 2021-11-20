@@ -4,10 +4,10 @@ import TapList from './TapList';
 import TapDetails from './TapDetails'
 
 
-class TapControl extends React.Component{
-  constructor(props){
+class TapControl extends React.Component {
+  constructor(props) {
     super(props);
-    this.state={
+    this.state = {
       step: 1,
       mainTapList: [],
       selectedTapId: null,
@@ -33,19 +33,19 @@ class TapControl extends React.Component{
     const selectedTap = this.state.mainTapList.filter(
       (t) => t.id === id
     )[0];
-    this.setState({ step: 1, selectedTap: selectedTap});
+    this.setState({ step: 1, selectedTap: selectedTap });
   };
 
   handleSellTap = () => {
     let sellPint = this.state.mainTapList.filter((t) => t.id === this.state.selectedTap.id)[0];
-    sellPint = sellPint.pints --;
-    this.setState({sellPint: sellPint})
+    sellPint = sellPint.pints--;
+    this.setState({ sellPint: sellPint })
   }
 
-  handleFillTap = () =>{
+  handleFillTap = () => {
     let fillPint = this.state.mainTapList.filter((t) => t.id === this.state.selectedTap.id)[0];
     fillPint = fillPint.pints += 124;
-    this.setState({fillPint: fillPint})
+    this.setState({ fillPint: fillPint })
   }
   //editClick here
 
@@ -60,44 +60,76 @@ class TapControl extends React.Component{
     });
   };
 
-  //handleEdit
-  //handleDelete
 
-render() {
-  let currentDisplay = null;
-  if(this.state.selectedTap != null){
-    currentDisplay = (
-      <>
-        <TapDetails 
-          tap = {this.state.selectedTap}
-          onSellTap = {this.handleSellTap}
-          onFillTap = {this.handleFillTap}
-        />
-        <button onClick={this.handleNewResetClick}>Back</button>
-      </>
-    );
-  } else if (this.state.step === 1){
-    currentDisplay = (
-      <>
-        <TapList
-          tapList={this.state.mainTapList}
-          onSelectingTap={this.handleSelectingTap}
-        />
-        <button onClick={this.handleNewResetClick}>Add Keg</button>
-      </>
-    );
-  } else if (this.state.step === 2){
-    currentDisplay = (
-      <>
-        <NewTap onNewTapCreation = {this.handleAddingNewTapToList}/>
-        <button onClick={this.handleNewResetClick}>Back</button>
-      </>
-    )
+  render() {
+    let currentDisplay = null;
+    if(this.state.selectedTap != null){
+      currentDisplay = (
+        <>
+          <TapDetails 
+            tap = {this.state.selectedTap}
+            onSellTap = {this.handleSellTap}
+            onFillTap = {this.handleFillTap}
+          />
+          <button onClick={this.handleNewResetClick}>Back</button>
+        </>
+      );
+    } else if (this.state.step === 1){
+      currentDisplay = (
+        <>
+          <TapList
+            tapList={this.state.mainTapList}
+            onSelectingTap={this.handleSelectingTap}
+          />
+          <button onClick={this.handleNewResetClick}>Add Keg</button>
+        </>
+      );
+    } else if (this.state.step === 2){
+      currentDisplay = (
+        <>
+          <NewTap onNewTapCreation = {this.handleAddingNewTapToList}/>
+          <button onClick={this.handleNewResetClick}>Back</button>
+        </>
+      )
+    }
+    return currentDisplay;
   }
-  return currentDisplay;
+
+//   render() {
+//     let currentDisplay = null;
+//     if (this.state.step === 1) {
+//       currentDisplay = (
+//         <>
+//           <TapList
+//             tapList={this.state.mainTapList}
+//             onSelectingTap={this.handleSelectingTap}
+//           />
+//           <button onClick={this.handleNewResetClick}>Add Keg</button>
+//         </>
+//       );
+//     } else if (this.state.step === 2) {
+//       currentDisplay = (
+//         <>
+//           <NewTap onNewTapCreation={this.handleAddingNewTapToList} />
+//           <button onClick={this.handleNewResetClick}>Back</button>
+//         </>
+//       )
+//     } else if (this.state.selectedTap === 3) {
+//       currentDisplay = (
+//         <>
+//           <TapDetails
+//             tap={this.state.selectedTap}
+//             onSellTap={this.handleSellTap}
+//             onFillTap={this.handleFillTap}
+//           />
+//           <button onClick={this.handleNewResetClick}>Back</button>
+//         </>
+//       );
+//     }
+//     return currentDisplay;
+//   }
 }
 
-}
+
 
 export default TapControl;
-
