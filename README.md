@@ -1,70 +1,57 @@
-# Getting Started with Create React App
+# Tap Room
+### By Art Weinstein
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<img src="keg-plan.png">
 
-## Available Scripts
 
-In the project directory, you can run:
 
-### `npm start`
+### A basic webpage created to test student knowledge on building websites wtih many-to-many relationships and authentication.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Technologies Used
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+* HTML
+* CSS
+* C#
+* ASP.NET Core MVC
+* NuGet
+* MySql WorkBench
+* Entity Framework Core
 
-### `npm test`
+## Description
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+This program allows a user to create treats and flavors. Both treats and flavors can be associated with each other, for example the flavor vanilla can be connected with the treat cake. Any user can view the treats, flavors and their details. However to edit, delete, add or otherwise alter treats and flavors, the user must create an account. The website will not allow a user to access those permissions until after an account is registered. After the user registers an account, the will gain access to the edit, delete, create and add pages. If the user tries to access them without creating an account, the site will prompt them to log in, or create an account. 
 
-### `npm run build`
+## Setup/Installation Requirements
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. [Clone](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository-from-github/cloning-a-repository) this repository.
+2. Within VS code or similar software, create an "appsettings.json file with the "Factory" directory.
+3. Within the appsettings.json file copy the following code and replace "EXAMPLE_PASSWORD" with your SQL workbench password.
+```
+{
+  "ConnectionStrings": {
+      "DefaultConnection": "Server=localhost;Port=3306;database=art_weinstein;uid=root;pwd=EXAMPLE_PASSWORD;"
+  }
+}
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+4. Install the necessary dependencies:
+- type ```dotnet add package Microsoft.EntityFrameworkCore -v 5.0.0```
+- type ```dotnet add package Pomelo.EntityFrameworkCore.MySql -v 5.0.0-alpha.2```
+- type ```dotnet add package Microsoft.EntityFrameworkCore.Proxies -v 5.0.0 ```
+6. enter ```dotnet build``` in your powershell terminal to build the program and verify the code is running correctly.
+7. enter ```dotnet ef database update``` to populate your database with the necessary tables.
+8. enter ```dotnet watch run``` to create a localhost in your browser and view the program. 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Known Bugs
 
-### `npm run eject`
+* No bugs known at the moment.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## License
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+* [MIT License](https://opensource.org/licenses/MIT)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Copyright (c) 2021 Art Weinstein
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Contact Information
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[Email](artur.weintsein@gmail.com)
