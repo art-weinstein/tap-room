@@ -5,46 +5,32 @@
 
 
 
-### A basic webpage created to test student knowledge on building websites wtih many-to-many relationships and authentication.
+### A basic webpage that allows users to add kegs, sell pints, view keg details and refill kegs.
 
 ## Technologies Used
 
+* JavaScript
 * HTML
 * CSS
-* C#
-* ASP.NET Core MVC
-* NuGet
-* MySql WorkBench
-* Entity Framework Core
+* React
 
 ## Description
 
-This program allows a user to create treats and flavors. Both treats and flavors can be associated with each other, for example the flavor vanilla can be connected with the treat cake. Any user can view the treats, flavors and their details. However to edit, delete, add or otherwise alter treats and flavors, the user must create an account. The website will not allow a user to access those permissions until after an account is registered. After the user registers an account, the will gain access to the edit, delete, create and add pages. If the user tries to access them without creating an account, the site will prompt them to log in, or create an account. 
-
+This program allows the user to add a keg, view the keg details and sell pints through the details page. On the details page, the user will see the keg name, brand, alcohol content, price and amount of pints left. Pints are automatically initialized to 124, and once the pints run out, the user will be informed that the keg is out of stock. Users will be able to refill the keg on the same details page. On the adding keg form, users can only enter a name, brand, price and alcohol percentage. Since the keg is set to 124 pints by default, there is no option to add pints on the form. The user can navigate this basic page through several buttons that prompt the user to go back, add a keg, or refill a keg. To see the keg details, the user must click the "click here for details/orders on the keg page.
 ## Setup/Installation Requirements
 
 1. [Clone](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository-from-github/cloning-a-repository) this repository.
-2. Within VS code or similar software, create an "appsettings.json file with the "Factory" directory.
-3. Within the appsettings.json file copy the following code and replace "EXAMPLE_PASSWORD" with your SQL workbench password.
-```
-{
-  "ConnectionStrings": {
-      "DefaultConnection": "Server=localhost;Port=3306;database=art_weinstein;uid=root;pwd=EXAMPLE_PASSWORD;"
-  }
-}
-```
 
-4. Install the necessary dependencies:
-- type ```dotnet add package Microsoft.EntityFrameworkCore -v 5.0.0```
-- type ```dotnet add package Pomelo.EntityFrameworkCore.MySql -v 5.0.0-alpha.2```
-- type ```dotnet add package Microsoft.EntityFrameworkCore.Proxies -v 5.0.0 ```
-6. enter ```dotnet build``` in your powershell terminal to build the program and verify the code is running correctly.
-7. enter ```dotnet ef database update``` to populate your database with the necessary tables.
-8. enter ```dotnet watch run``` to create a localhost in your browser and view the program. 
+
+2. Install the necessary dependencies:
+- type ```npm install``` to install the necessary dependencies.
+- type ```npm run start``` to preview the program.
+
+3. Follow the prompts on the page to navigate the site (note, to view the keg details, you must click "click here for details/orders) towards the top of the page
 
 ## Known Bugs
 
-* No bugs known at the moment.
+* No bugs known at the moment, but UI improvements will be made.
 
 ## License
 
