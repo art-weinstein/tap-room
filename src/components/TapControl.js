@@ -41,6 +41,12 @@ class TapControl extends React.Component{
     sellPint = sellPint.pints --;
     this.setState({sellPint: sellPint})
   }
+
+  handleFillTap = () =>{
+    let fillPint = this.state.mainTapList.filter((t) => t.id === this.state.selectedTap.id)[0];
+    fillPint = fillPint.pints += 124;
+    this.setState({fillPint: fillPint})
+  }
   //editClick here
 
   //deleteClick here
@@ -65,6 +71,7 @@ render() {
         <TapDetails 
           tap = {this.state.selectedTap}
           onSellTap = {this.handleSellTap}
+          onFillTap = {this.handleFillTap}
         />
         <button onClick={this.handleNewResetClick}>Back</button>
       </>

@@ -6,6 +6,10 @@ function TapDetails(props) {
   const handleSellBeer = (event) => {
     props.onSellTap(event.target.value)
   }
+  const handleFillKeg = (event) => {
+    props.onFillTap(event.target.value)
+  }
+
 
   if (tap.pints > 0) {
     return (
@@ -16,9 +20,13 @@ function TapDetails(props) {
         <button value={tap.id} onClick={handleSellBeer}>Sell a pint!</button>
       </>
     );
-  } else{
+  } else if (tap.pints === 0){
     return (
-      <h3>{tap.name} is out of stock!</h3>
+      <>
+        <h3>{tap.name} is out of stock!</h3>
+        <hr />
+        <button value={tap.id} onClick={handleFillKeg}>Refill the keg</button>
+      </>
     )
   }
 }
@@ -26,7 +34,9 @@ function TapDetails(props) {
 
 TapDetails.propTypes = {
   tap: PropTypes.object,
-  onSellTap: PropTypes.func
+  onSellTap: PropTypes.func,
+  onFillTap: PropTypes.func,
+  onNewResetClick: PropTypes.func
 }
 
 export default TapDetails;
